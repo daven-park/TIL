@@ -24,9 +24,9 @@
         <th>비고</th>
     </tr>
     <tr>
-        <td>queue.offer(value)</td>
+        <td>queue.offer(E e)</td>
         <td>값 추가</td>
-        <td>queue.add(value)</td>
+        <td>queue.add(E e)</td>
     </tr>
     <tr>
         <td>queue.poll()</td>
@@ -34,7 +34,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>queue.remove(index)</td>
+        <td>queue.remove(Object o)</td>
         <td>해당 인덱스 값 제거</td>
         <td></td>
     </tr>
@@ -56,18 +56,19 @@
 </table>
 
 
-# PriorityQueue 사용하기✍️
+## PriorityQueue 사용하기✍️
 PriorityQueue 객체는 컬렉션 객체이므로 제너릭으로 데이터 타입을 명시해주어야 해요!
 
 ```java
 PriorityQueue<Integer> queue = new PriorityQueue<>();
-PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
+PriorityQueue<Integer> queue = new PriorityQueue<>(
+                          Collections.reverseOrder());
 ```
 기본적으로 우선순위가 낮은 순으로 정렬이 되지만 reverseOrder() 메서드를 통해
 우선순위를 바꿀 수 있어요 !
 
-또 다른 방법으로는 Comparable&#60;T>  인터페이스를 상속하는 방법이 있어요.
-Comparable&#60;T> 인터페이스에 정의된 CompareTo 메서드를 통해 우선순위를 조건에 맞게 정의할 수 있어요.
+또 다른 방법으로는 클래스에 Comparable&#60;T>  인터페이스를 상속하는 방법이 있어요.
+Comparable&#60;T> 인터페이스에 정의된 CompareTo 메서드를 통해 객체를 큐로 다루게 될 때 우선순위를 조건에 맞게 정의할 수 있어요.
 
 ```java
 static class Node implements Comparable<Node> {
@@ -84,8 +85,28 @@ static class Node implements Comparable<Node> {
         return this.w - o.w;
     }
 }
-```
+ public static void main(String[] args) {
+    PriorityQueue<Node> pq = new PriorityQueue<>();
+    pq.add(new Node(1, 2));
+    pq.offer(new Node(2, 1));
+    pq.offer(new Node(3, 4));
+    pq.offer(new Node(4, 8));
 
+    int size = pq.size();
+    for (int i = 0; i < size; i++) {
+        System.out.print(pq.poll().v + " ");
+    }
+}
+```
+![img_1.png](img_1.png)
+
+결과 : 2 1 3 4
+
+
+## 마무리 ✍
+- 기존 큐에 우선순위 조건이 들어간 방식으로 가중치와 같은 추가적인 조건에서 유리해요.
+- 우선순위 큐를 다루기 위해 큐(Queue)의 구조와 힙(Heap)의 구조를 알고 있는 것이 좋아요 .
+- 
 
 
 
