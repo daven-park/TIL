@@ -59,7 +59,7 @@
 </table>
 
 
-✍# PriorityQueue 사용하기
+# PriorityQueue 사용하기 ✍
 PriorityQueue 객체는 컬렉션 객체이므로 제너릭으로 데이터 타입을 명시해주어야 해요!
 
 ```java
