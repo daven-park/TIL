@@ -61,8 +61,7 @@ PriorityQueue 객체는 컬렉션 객체이므로 제너릭으로 데이터 타�
 
 ```java
 PriorityQueue<Integer> queue = new PriorityQueue<>();
-PriorityQueue<Integer> queue = new PriorityQueue<>(
-                          Collections.reverseOrder());
+PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
 ```
 기본적으로 우선순위가 낮은 순으로 정렬이 되지만 reverseOrder() 메서드를 통해
 우선순위를 바꿀 수 있어요 !
