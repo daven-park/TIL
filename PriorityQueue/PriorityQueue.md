@@ -98,7 +98,6 @@ static class Node implements Comparable<Node> {
     }
 }
 ```
-![img_1.png](img_1.png)
 
 결과 : 2 1 3 4
 
@@ -106,7 +105,6 @@ static class Node implements Comparable<Node> {
 ## 마무리 ✍
 - 기존 큐에 우선순위 조건이 들어간 방식으로 가중치와 같은 추가적인 조건에서 유리해요.
 - 우선순위 큐를 다루기 위해 큐(Queue)의 구조와 힙(Heap)의 구조를 알고 있는 것이 좋아요 .
-- 
 
 
 
