@@ -25,7 +25,7 @@ PriorityQueue<Integer> queue = new PriorityQueue<>(
 기본적으로 우선순위가 낮은 순으로 정렬이 되지만 reverseOrder() 메서드를 통해 
 우선순위를 바꿀 수 있어요 !
 
-### PriorityQueue 
+### PriorityQueue 함수들 
 
 <table>
     <tr>
