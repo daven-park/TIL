@@ -22,4 +22,5 @@
 ### if, for
 ```javascript
 <div v-if="">
+<div v-for="">
 ```
