@@ -7,3 +7,8 @@ Failed to start bean 'documentationPluginsBootstrapper'; nested exception is jav
 ```
 
 - build.gradle에서 SpringBoot 버전을 2.4.2로 변경하였더니 해결되었다 😀
+
+## 참고 링크
+
+- [링크 1](https://ldne.tistory.com/332)
+- [링크 2](https://stackoverflow.com/questions/40241843/failed-to-start-bean-documentationpluginsbootstrapper-in-spring-data-rest)
