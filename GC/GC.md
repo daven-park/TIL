@@ -59,7 +59,7 @@ stop-the-world를 통해 앱 실행 정지 후  GC 실행
    - 성능 개선을 위해 stop-the-world 시간 단축 작업
 
 2. mark and sweep
-   - mark : 사용된느 메모리와 사용되지 않는 메모리 식별 작업
+   - mark : 사용 메모리와 사용되지 않는 메모리 식별 작업
    - sweep : mark 단계에서 사용되지 않음으로 식별된 메모리 해제 작업
 
 </br>
