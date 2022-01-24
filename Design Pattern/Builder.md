@@ -1,6 +1,9 @@
 # 빌더 패턴(Builder Pattern)
 
-    빌더 패턴은 생성자에 들어갈 매개 변수가 많든 적든 차례차례 매개 변수를 받아들이고 모든 매개 변수를 받은 뒤에 이 변수들을 통합해서 한번에 사용하는 패턴
+```
+빌더 패턴은 생성자에 들어갈 매개 변수가 많든 적든 차례차례 매개 변수를 
+받아들이고 모든 매개 변수를 받은 뒤에 이 변수들을 통합해서 한번에 사용하는 패턴
+```
 
 > 객체의 생성 과정과 표현 방법을 분리한 것
 
@@ -8,7 +11,7 @@
 
 ## 구조
 
-<p align="center"><img src="https://4z7l.github.io/images/pattern/builder/uml.png
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F5qpI2%2FbtqAPehLl2e%2FqzvbFnYMhHV265k04U3gDk%2Fimg.png
 " alt="msa" width="600"/></p>
 
 </br>
