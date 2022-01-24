@@ -82,10 +82,11 @@ DB의 값을 문서로 저장하는 계층적 트리 데이터 방식(XML, JSON,
 
 </br>
 
-### Replica Set
+### Wide Columnar
 
 ```
 자동 장애 극복 지원. Master 장애시 Slave가 Master로 역할 전환
+ = 컬럼의 이름과 포맷은 테이블의 로우마다 "다를 수 있다.
 ```
 
 - MongoDB에서는 primary, secondary로 부름
@@ -93,7 +94,11 @@ DB의 값을 문서로 저장하는 계층적 트리 데이터 방식(XML, JSON,
 
 </br>
 
-<p align="center"><img src="https://media.vlpt.us/images/swhan9404/post/c7d69ca0-bfe2-48a6-9f8b-9b50c3f04fa5/image.png" alt="msa" width="500"/></p>
+<p align="center"><img src="https://media.vlpt.us/images/hanblueblue/post/49172185-eb40-4555-b078-8b7916148d92/image.png" alt="msa" width="500"/></p>
+
+
+</br>
+<p align="center"><img src="https://media.vlpt.us/images/hanblueblue/post/1ab12c52-c4f9-4fdc-a273-194000706244/image.png" alt="msa" width="500"/></p>
 
 </br>
 
@@ -107,18 +112,24 @@ DB의 값을 문서로 저장하는 계층적 트리 데이터 방식(XML, JSON,
 ### Graph
 
 ```
-데이터를 노드로, 관계를 엣지로 표현
+데이터를 노드로, 관계를 엣지로 표현하는 그래프 형식의 데이터베이스
 ```
 
 </br>
 
-<p align="center"><img src="https://bi-insider.com/wp-content/uploads/2019/01/Graph-Database.png" alt="msa" width="400"/></p>
+
+<p align="center"><img src="https://media.vlpt.us/images/hanblueblue/post/4f8e6404-915b-4dc8-8b79-29ac88a6d0a2/image.png" alt="msa" width="500"/></p>
+
+- 노드 : 추적 대상이되는 실체 = 레코드
+- 엣지 : (=그래프 or 관계) 노드를 다른 노드에 연결하는 선, 관계를 표현
+- 프로퍼티 : 노드의 정보
+
+</br>
+<p align="center"><img src="그래프.jpg" alt="msa" width="500"/></p>
 
 </br>
 
 - RDBMS보다 퍼포먼스가 좋고 유연하며 유지보수에 용이함.
-
-</br>
 
 > SNS, Network Diagram 등에 사용
 
