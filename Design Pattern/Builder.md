@@ -8,7 +8,7 @@
 
 ## 구조
 
-<p align="center"><img src="https://4z7l.github.io/images/pattern/builder/uml.png
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F5qpI2%2FbtqAPehLl2e%2FqzvbFnYMhHV265k04U3gDk%2Fimg.png
 " alt="msa" width="600"/></p>
 
 </br>
