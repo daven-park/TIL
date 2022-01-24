@@ -125,7 +125,7 @@ DB의 값을 문서로 저장하는 계층적 트리 데이터 방식(XML, JSON,
 - 프로퍼티 : 노드의 정보
 
 </br>
-<p align="center"><img src="그래프.jpg" alt="msa" width="500"/></p>
+<p align="center"><img src="https://github.com/BusChanny/TIL/blob/main/NoSQL/%EA%B7%B8%EB%9E%98%ED%94%84.JPG" alt="msa" width="500"/></p>
 
 </br>
 
