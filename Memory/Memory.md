@@ -1,4 +1,4 @@
-ㅠ.bbrb# Memory
+# Memory
 
 > CPU가 직접 접근 가능한 일종의 데이터 저장장치
 
