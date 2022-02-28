@@ -15,8 +15,8 @@
 
 </br>
 
-<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb1P4ah%2FbtquOqoqqEn%2F01xyoxVckbfNu5q809Y6rk%2Fimg.png
-" alt="msa" width="600"/></p>
+
+![컴파일시간](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb1P4ah%2FbtquOqoqqEn%2F01xyoxVckbfNu5q809Y6rk%2Fimg.png)
 
 </br>
 
@@ -27,8 +27,7 @@
 
 </br>
 
-<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F4Tiz7%2FbtqC9xsWJaH%2FLRg2xR4hkDgNh9G825Zxwk%2Fimg.png
-" alt="msa" width="600"/></p>
+![적재시간](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F4Tiz7%2FbtqC9xsWJaH%2FLRg2xR4hkDgNh9G825Zxwk%2Fimg.png)
 
 </br>
 
@@ -37,8 +36,7 @@
 
 </br>
 
-<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbJV8Hx%2FbtqC6k9zobX%2FqwGWyIS277W4ewGNkb4LQK%2Fimg.png
-" alt="msa" width="600"/></p>
+![실행시간](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbJV8Hx%2FbtqC6k9zobX%2FqwGWyIS277W4ewGNkb4LQK%2Fimg.png)
 
 </br>
 
@@ -50,8 +48,7 @@
 
 </br>
 
-<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdGS2qq%2FbtqAJwDhpJK%2FoPVkHdYvn3aSi7PL7luuZ1%2Fimg.png
-" alt="msa" width="600"/></p>
+![MMU](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdGS2qq%2FbtqAJwDhpJK%2FoPVkHdYvn3aSi7PL7luuZ1%2Fimg.png)
 
 </br>
 
@@ -77,13 +74,12 @@
 
 </br>
 
-<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbjcOad%2FbtqAKiki52t%2FH1pMQi4JAo3QAdVaHqSVW1%2Fimg.png
-" alt="msa" width="500"/></p>
+![스와핑1](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbjcOad%2FbtqAKiki52t%2FH1pMQi4JAo3QAdVaHqSVW1%2Fimg.png)
 
 - 프로세스 상태 그대로 하드디스크에 저장
 
-<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FC1c1Q%2FbtqAI3uSUt7%2FkvXCklS9Wh7rqWOUAtgVP0%2Fimg.jpg
-" alt="msa" width="500"/></p>
+
+![스와핑2](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FC1c1Q%2FbtqAI3uSUt7%2FkvXCklS9Wh7rqWOUAtgVP0%2Fimg.jpg)
 
 - 새로 로딩하는 것이 아닌 이미지 그대로 메모리에 복붙
 - 다시 불러올 때는 결국 동적 주소 바인딩
@@ -129,13 +125,11 @@
 1. 외부 단편화
    - 할당 메모리 외부에서 사용하지 못하는 단편화
 
-<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlFUQ5%2FbtqAHIkWOzV%2FiKyAnjpi2pPEcoHPRwd8M0%2Fimg.png
-" alt="msa" width="400"/></p>
+![단편화](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlFUQ5%2FbtqAHIkWOzV%2FiKyAnjpi2pPEcoHPRwd8M0%2Fimg.png)
 
-<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FPpdlL%2FbtqAKvX4SPF%2FY4gKgRSD43IYZfZCT1yKD1%2Fimg.png
-" alt="msa" width="400"/></p>
+![단편화](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FPpdlL%2FbtqAKvX4SPF%2FY4gKgRSD43IYZfZCT1yKD1%2Fimg.png)
 
-2. 내부 단편화
+1. 내부 단편화
    - 내부 메모리에서 작은 단위의 메모리가 남게되는 단편화
 
 ### 메모리 압축
@@ -149,8 +143,8 @@
 ## 페이징(paging)
 
 - 프로세스가 사용하는 메모리 공간을 잘게 나누어서 할당하는 관리 기법
-  <p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fs5fhI%2FbtqAKiruCgN%2FsIoPbQKljmrL0NfJ5eEMKk%2Fimg.png
-  " alt="msa" width="500"/></p>
+
+![페이징](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fs5fhI%2FbtqAKiruCgN%2FsIoPbQKljmrL0NfJ5eEMKk%2Fimg.png)
 
 - 프레임 - 실제 메모리
 - 페이지 - 프로세스의 메모리 공간
@@ -158,8 +152,7 @@
 
 ### 페이징 하드웨어 - MMU
 
-<p align="center"><img src="https://blog.kakaocdn.net/dn/xsKZ5/btq6RbaLfAj/DXx6A1h7xE2RxQVOiSZrjK/img.png
-  " alt="msa" width="600"/></p>
+![PMMU](https://blog.kakaocdn.net/dn/xsKZ5/btq6RbaLfAj/DXx6A1h7xE2RxQVOiSZrjK/img.png)
 
 ### 특징
 
@@ -175,10 +168,10 @@
 - 프로세스 메모리 공간을 여러개의 작은 단위로 분할하여 할당
 - 프로그램의 논리적 단위에 따라 프로세스 공간 구분( method, object function stack 등등 )
 - 세그먼트의 실제 메모리 위치를 저장할 세그먼트 테이블 사용
-<p align="center"><img src="https://blog.kakaocdn.net/dn/bd1Bzn/btqAKur3847/8GEFV56KPoiUJx4wO7k1S0/img.png
-  " alt="msa" width="600"/></p>
-<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FQyY2T%2FbtqAKuyMWYS%2FcNq2JTslnzZExU2EyrG0e0%2Fimg.png
-  " alt="msa" width="600"/></p>
+
+![세그멘테이션1](https://blog.kakaocdn.net/dn/bd1Bzn/btqAKur3847/8GEFV56KPoiUJx4wO7k1S0/img.png)
+
+![세그멘테이션2](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FQyY2T%2FbtqAKuyMWYS%2FcNq2JTslnzZExU2EyrG0e0%2Fimg.png)
 
 </br>
 
