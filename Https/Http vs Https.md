@@ -5,18 +5,17 @@
 - 클라이언트와 서버 사이에서 통신을 주고받게 해주는 프로토콜
 - 통신으로 주고받는 데이터가 암호화되지 않아 쉽게 데이터를 도난당함
 
-
 ## Https(Hypertext Transfer Protocol Secure)
 
 - SSL을 사용함으로써 데이터 보안 문제를 해결한 프로토콜
 - **공개키** 암호화 방식으로 텍스트 암호화
+- [https 통신 흐름 참고](https://jeong-pro.tistory.com/89)
 
 ![https](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FTIQPl%2Fbtq0kDsepHd%2FUzzv6JatoLtsDsdvXFZmsk%2Fimg.png)
 
 </br>
 
-
-## 공개키 
+## 공개키
 
 - 암호화와 복호화에 사용하는 암호키를 분리한 알고리즘
 - 자신이 가지고 있는 고유 비밀키로만 복호화 가능한 공개키를 공개
@@ -50,3 +49,8 @@
 </br>
 
 # 참고
+
+- [https://mysterico.tistory.com/30](https://mysterico.tistory.com/30)
+- [https 통신 흐름 참고](https://firework-ham.tistory.com/4)
+- [https 참고](https://brunch.co.kr/@hyoi0303/10)
+- [ssl 참고](https://wangin9.tistory.com/entry/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90-URL-%EC%9E%85%EB%A0%A5-%ED%9B%84-%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94-%EC%9D%BC%EB%93%A4-5TLSSSL-Handshake)
