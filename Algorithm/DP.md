@@ -6,8 +6,6 @@
 
 # 피보나치 수열
 
-![점화식](https://blog.kakaocdn.net/dn/YBIkW/btqTPxRFmLO/OqtOcFX6Zp5UiOtGzlFtw1/img.png)
-
 ![예시](https://blog.kakaocdn.net/dn/DTOkS/btqGsnHkZ4a/kbhtuAY7fDoPaLzqCMw4l0/img.png)
 
 </br>
