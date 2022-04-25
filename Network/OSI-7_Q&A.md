@@ -10,7 +10,7 @@
 - Address Resolution Protocol
   IP 주소를 MAC 주소로 바꿔주는 프로토콜
 
-## 3. 그럼 MAC은 뭐에요?
+## 3. MAC은 뭐에요?
 
 - Media Access Control는 네트워크 통신을 위한 물리적 주소로 사용되며 기기를 고유적으로 식별하게 해주는 역할을 합니다.
 
