@@ -1,4 +1,3 @@
 # TIL
-Today I Learned
 
-# MSA
+### 오늘의 귀찮음으로 내일을 후회하지 않게
