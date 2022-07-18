@@ -188,3 +188,13 @@ Vary: Cookie, Accept-Encoding
 - 기존 TCP 위에서 실행하는 TLS를 캡슐화하였기 때문에 TLS에서 필요하지 않았던 부분까지 QUIC에서는 암호화해야하는 과정으로 인해 암호화된 헤더 필드 영역을 중간에서 읽지 못하는 문제 발생
 
 ![헤더암호화](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F2QVsl%2Fbtruuh5OXCf%2FklyFU8jvd0SWK6NEN6jrr1%2Fimg.png)
+
+
+<br/>
+
+### 참고 사이트
+
+- [MDN](https://developer.mozilla.org/ko/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
+- [버전별 특징](https://velog.io/@neity16/HTTP-HTTP-%EB%B2%84%EC%A0%84-%EB%B3%84-%ED%8A%B9%EC%A7%95)
+- [2.0 정리](https://velog.io/@taesunny/HTTP2HTTP-2.0-%EC%A0%95%EB%A6%AC)
+- [QUIC 알아보기](https://donggov.tistory.com/188)
