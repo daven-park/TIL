@@ -25,6 +25,7 @@ A very simple HTML page
 - 상태 코드 표시를 통해 성공과 실패를 알 수 있고 결과에 따른 동작을 할 수 있게 됨
 - `HTTP 헤더` 개념을 통해 요청, 응답에 대한 처리와 `메타데이터` 전송 허용 및 프로토콜 확장
 - Context-Type 라인을 통해 HTML 외의 다앙햔 문서 전송 가능
+- POST, HEAD 메서드 추가
 
 ```
 GET /mypage.html HTTP/1.0
@@ -48,6 +49,7 @@ A page with an image
 
 > 표준 프로토콜
 
+- OPTIONS, PUT, DELETE, TRACE 메서드 추가
 - `Keep-Alive`를 통한 커넥션 재활용을 통해 시간 절약
 - `PipeLining`을 통해 첫 요청이 응답되기 전에 다음 요청을 처리 가능
 - `Language`, `Encoding`과 같은 타입 컨텐츠 포함을 통해 리소스 환경 통일
