@@ -212,3 +212,12 @@ export const counterActions = counterSlice.actions;
 
 export default counterSlice.reducer;
 ```
+
+<br/>
+
+
+# 참조
+
+- [Redux](https://hanamon.kr/redux%eb%9e%80-%eb%a6%ac%eb%8d%95%ec%8a%a4-%ec%83%81%ed%83%9c-%ea%b4%80%eb%a6%ac-%eb%9d%bc%ec%9d%b4%eb%b8%8c%eb%9f%ac%eb%a6%ac/)
+- [redux docs](https://redux.js.org/introduction/getting-started)
+- [redux란](https://mjn5027.tistory.com/33)
