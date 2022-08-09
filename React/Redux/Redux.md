@@ -125,6 +125,8 @@ store.dispatch({ type: "decrement" });
 > subscribe : action이 dispatch될 때 함수 호출
 
 
+![ㅁㄴㅇㄹ](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/29c0231d-c9a1-47ab-936d-0f158ad7d322/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220809%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220809T005650Z&X-Amz-Expires=86400&X-Amz-Signature=b6053b556659f27039384863aa805faa9e879f5607138ae36edbe991ff805396&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+
 <br/>
 
 ### Redux hooks를 사용하여 구현
