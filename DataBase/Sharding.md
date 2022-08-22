@@ -58,6 +58,8 @@
 - 3개를 한쌍으로 리플리카 셋을 생성 ➡ RAID(Redundant Array of Independent Disk) : 독립된 디스크 복수 배열
 
 
+<br/>
+
 ## 참조
 
 - [몽고DB 샤딩](https://dev-cini.tistory.com/36)
