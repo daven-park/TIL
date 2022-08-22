@@ -56,3 +56,10 @@
 ![리플](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbxm1dj%2FbtrmWsvjQh3%2FNISd4zrEOIvO7DDBJbcHC1%2Fimg.png)
 
 - 3개를 한쌍으로 리플리카 셋을 생성 ➡ RAID(Redundant Array of Independent Disk) : 독립된 디스크 복수 배열
+
+
+## 참조
+
+- [몽고DB 샤딩](https://dev-cini.tistory.com/36)
+- [샤딩](https://nesoy.github.io/articles/2018-05/Database-Shard)
+- [샤딩2](https://minkwon4.tistory.com/317)
