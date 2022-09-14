@@ -23,6 +23,11 @@
 
 <br/>
 
+### 단점
+
+- 교착상태(Deadlock)
+- 상호배제(Mutual Exclusion)
+
 
 ## 세마포어(Semaphore)
 
