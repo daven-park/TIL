@@ -12,6 +12,7 @@
 
 # 자바스크립트 엔진을 알아보기 전에 !
 
+<br/>
 
 ## 인터프리터? 컴파일러?
 
@@ -60,6 +61,8 @@
 <br/>
 
 # 자바스크립트 엔진
+
+> JS 코드를 바이트 코드로 변경하여 속도를 높이고 머신 코드로 변경하여 컴퓨터가 이해할 수 있게 전달하는 역할
 
 
 ### JS 엔진 동작 원리
@@ -135,6 +138,7 @@ function hello (name) {
 
 > 처리할 메세지 목록, 실행할 콜백 함수 리스트로 이벤트나 http요청, 비동기 콜백 함수를 콜백 큐에 푸시한다
 
+<br/>
 
 ### 📢 
 
@@ -145,9 +149,13 @@ function hello (name) {
 
 # V8 엔진
 
+![v8](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbcMCAY%2FbtqHvKCXpmC%2FxxFkWX1NMwKCzyz4Sp89V0%2Fimg.png)
+
 > 구글에서 제작한 Chrome, Node.js에서 사용되는 자바스크립트 엔진
 
-![c+](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbRmKLy%2FbtqHAokHzrH%2FktR8upqsKjL5kQ8rZpdNJ0%2Fimg.png)
+<br/>
+
+![c+](https://media.geeksforgeeks.org/wp-content/uploads/20211002235143/workinggfg.png)
 
 - 일반적인 인터프리터 형식이 아닌 `바이트코드`로 컴파일하고 실행하는 방식
 
@@ -250,5 +258,61 @@ console.log(hello("changhyun"));
 
 <br/>
 
-## TurboFan 최적화 테스트해보기
+## TurboFan 뜨거워진 코드 식히기
 
+```cc
+// v8/src/execution/rumtime-profiler.cc
+OptimizationReason RuntimeProfiler::ShouldOptimize(JSFunction function, BytecodeArray bytecode) {
+  // int ticks = 이 함수가 몇번 호출되었는지
+  int ticks = function.feedback_vector().profiler_ticks();
+  int ticks_for_optimization =
+      kProfilerTicksBeforeOptimization +
+      (bytecode.length() / kBytecodeSizeAllowancePerTick);
+  if (ticks >= ticks_for_optimization) {
+    // 함수가 호출된 수가 임계점인 ticks_for_optimization을 넘기면 뜨거워진 것으로 판단
+    return OptimizationReason::kHotAndStable;
+  } else if (!any_ic_changed_ && bytecode.length() < kMaxBytecodeSizeForEarlyOpt) {
+    // 이 코드가 인라인 캐싱되지 않았고 바이트 코드의 길이가 작다면 작은 함수로 판단
+    return OptimizationReason::kSmallFunction;
+  }
+  // 해당 사항 없다면 최적화 하지 않는다.
+  return OptimizationReason::kDoNotOptimize;
+}
+```
+
+- 실제 RuntimeProfiler의 메소드를 통해 뜨거워진 상태 `KHotAndStable`를 확인할 수 있음.
+- `node --trace-opt 파일명`을 통해 최적화 과정을 추적할 수 있음.
+
+
+<br/>
+
+![hotandstable](./hotandstable.JPG)
+
+
+- 위와 같은 형태로 반복적인 함수가 사용되었을 때 `hot and stable`이라는 이유로 최적화 되었음을 알 수 있음.
+
+
+<br/>
+<br/>
+
+# 마치며
+
+- 자바스크립트 엔진의 동작과정과 원리를 파악해보면서 `컴파일러`와 `인터프리터`에 대한 개념 되짚어보기
+- `Ignition`과 `TurboFan`등의 작동을 통해 최적화작업에 대한 이해
+- 작동원리를 통해 최적화기법이 어떻게 실행되는지 파악하는 과정으로 지속적으로 업데이트되는 크롬의 엔진을 파악해볼 수 있었음
+
+<br/>
+<br/>
+
+# 참고사이트
+
+- [자바스크립트의 동작원리: 엔진, 런타임, 호출 스택](https://joshua1988.github.io/web-development/translation/javascript/how-js-works-inside-engine/)
+- [How JavaScript works: inside the V8 engine + 5 tips on how to write optimized code](https://blog.sessionstack.com/how-javascript-works-inside-the-v8-engine-5-tips-on-how-to-write-optimized-code-ac089e62b12e)
+- [V8 엔진은 어떻게 내 코드를 실행하는 걸까?](https://evan-moon.github.io/2019/06/28/v8-analysis/)
+- [자바스크립트는 어떻게 작동하는가: V8 엔진의 내부 + 최적화된 코드를 작성을 위한 다섯 가지 팁](https://engineering.huiseoul.com/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94%EA%B0%80-v8-%EC%97%94%EC%A7%84%EC%9D%98-%EB%82%B4%EB%B6%80-%EC%B5%9C%EC%A0%81%ED%99%94%EB%90%9C-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%9E%91%EC%84%B1%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%8B%A4%EC%84%AF-%EA%B0%80%EC%A7%80-%ED%8C%81-6c6f9832c1d9)
+- [[2020.10.16] Google Chrome V8 엔진을 파헤쳐보자](https://helloinyong.tistory.com/290)
+- [[번역] Understanding V8’s Bytecode](https://bumkeyy.gitbook.io/bumkeyy-code/javascript/understanding-v8s-bytecode)
+- [눈에 보이는 자바스크립트 엔진 동작원리](https://www.betterweb.or.kr/blog/%EB%88%88%EC%97%90-%EB%B3%B4%EC%9D%B4%EB%8A%94-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%97%94%EC%A7%84-%EB%8F%99%EC%9E%91%EC%9B%90%EB%A6%AC/)
+- [Sneak peek into Javascript V8 Engine](https://medium.com/@poojasharma_93670/sneak-peek-into-javascript-v8-engine-d2bb2eb2bdb2)
+- [Javascript 기초 - JavaScript 개발한다면 JIT은 알아야JIT](https://samslow.github.io/development/2020/07/06/JIT/)
+- [자바스크립트 JIT](https://m.blog.naver.com/z1004man/221914280533)
