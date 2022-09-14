@@ -5,7 +5,7 @@
 
 [2. 자바스크립트 엔진](#자바스크립트-엔진)
 
-1. V8에 대해서
+[3. V8에 대하여](#v8-엔진)
 
 <br/>
 <br/>
@@ -136,6 +136,10 @@ function hello (name) {
 > 처리할 메세지 목록, 실행할 콜백 함수 리스트로 이벤트나 http요청, 비동기 콜백 함수를 콜백 큐에 푸시한다
 
 
+### 📢 
+
+- 결국 자바스크립트 엔진의 기본 구성 요소는 다르지 않고 브라우저별로 각 기업의 자체 엔진을 통해 동작원리를 수행한다.
+
 <br/>
 <br/>
 
@@ -161,6 +165,28 @@ function hello (name) {
 - Crankshaft : JIT 컴파일러로 최적화된 코드 생산
 - Ignition : JS코드를 바이트코드로 변환하는 인터프리터
 - TurboFan : 최적화 담당 컴파일러. Profiler의 데이터를 통해 기준에 맞는 코드를 가져와 최적화시키는 역할
+
+<br/>
+
+
+
+### 현재의 V8 엔진 구조
+
+> 이전 버전의 Ignition과 TurboFan의 성능 향상으로 다른 기능들이 필요없어진 구조
+
+![현재](https://miro.medium.com/max/700/1*FrYgZk-HCP8eiaX8Gd3ojw.png)
+
+
+<br/>
+
+### V8 엔진의 동작 과정
+
+![엔진동작](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcK7wiK%2FbtqHujdwY3X%2FztPVFaMOwKT3tl9PXfKU5K%2Fimg.png)
+
+1. 코드를 파싱하여 AST 구조 생성
+2. Ignition을 통해 바이트 코드로 변환
+3. TurboFan을 통해 코드 최적화
+4. 최적화 머신 코드 전달
 
 <br/>
 
@@ -200,17 +226,29 @@ console.log(hello("changhyun"));
 
 ### 1. 인라이닝
 
+> 가능한 많은 함수를 호출된 위치에 내용으로 변환하는 과정
 
+![인라이닝](https://miro.medium.com/max/512/0*RRgTDdRfLGEhuR7U.png)
 
-### 현재의 V8 엔진 구조
+<br/>
 
+### 2. 히든 클래스
 
+> 자바스크립트의 Prototype을 통한 데이터 관리
 
-![현재](https://miro.medium.com/max/700/1*FrYgZk-HCP8eiaX8Gd3ojw.png)
+![히드클래스](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdnBeC6%2FbtqK6BV8etB%2FYpWUYHnW64UZhIvLWaRCg0%2Fimg.png)
+
+- 쉽게 말해 데이터 타입이 동적으로 변할 수 있기 때문에 히든 클래스 객체를 생성하여 변경된 정보를 저장하는 과정으로 클래스가 없는 JS의 한계를 어느정도 보완해주는 역할
 
 
 <br/>
 
-### V8 엔진의 동작 과정
+### 3. 인라인 캐싱
 
-![엔진동작](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcK7wiK%2FbtqHujdwY3X%2FztPVFaMOwKT3tl9PXfKU5K%2Fimg.png)
+> 히든 클래스의 오프셋을 캐싱하여 조회 작업을 생략함으로서 성능을 향상시키는 작업
+
+
+<br/>
+
+## TurboFan 최적화 테스트해보기
+
