@@ -44,3 +44,12 @@
 - 개별적인 사용자 수준의 영역이 존재하여 커널이 개입하지 못한다.
 - 커널 수준의 보안 적용 불가
 - `컨텍스트 스위칭` 불가. =>  독립된 하나의 프로세스이므로 한 쓰레드 대기 시 전체 실행 불가.
+
+<br/>
+<br/>
+
+# 참조
+
+- [사용자 수준 Thread와 커널 수준 Thread 의 차이점은?](https://junghyun100.github.io/%EC%82%AC%EC%9A%A9%EC%9E%90%EC%88%98%EC%A4%80ThreadVS%EC%BB%A4%EB%84%90%EC%88%98%EC%A4%80Thread/)
+- [(운영체제) 사용자 수준 스레드와 커널 수준 스레드의 차이](https://helloinyong.tistory.com/2930)
+- [사용자 수준 스레드, 커널 수준 스레드](https://velog.io/@taehee-kim-dev/%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%88%98%EC%A4%80-%EC%8A%A4%EB%A0%88%EB%93%9C-%EC%BB%A4%EB%84%90-%EC%88%98%EC%A4%80-%EC%8A%A4%EB%A0%88%EB%93%9C)
