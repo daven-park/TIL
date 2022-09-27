@@ -7,7 +7,9 @@
 - 동적 타입을 허용한다.
 
 ```javascript
-<script type="text/javascript">document.write("Hello World")</script>
+<script type="text/javascript">
+   document.write("Hello World")
+</script>
 ```
 
 <br/>
