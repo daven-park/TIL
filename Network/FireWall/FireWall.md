@@ -1,6 +1,4 @@
-# 방화벽
-
-## 방화벽이란 ?
+# 방화벽이란 ?
 
 - 들어오고 나가는 네트워크 트래픽을 모니터링하고 제어하는 네트워크 보안 시스템
 - 내부 네트와크와 외부 네트워크를 나누는 벽으로 데이터의 **허용, 거부, 검열, 수정** 등의 기능으로 구성
@@ -139,18 +137,63 @@
 
 # 방화벽 구축 방법
 
-## 1. 스크리닝 라우터
+## 1. Bastion 호스트
 
-- 네트워크에서 사용하는 통신 프로토콜의 형태, 시작점 주소와 목적지 주소, 틍신 프로토콜의 제어필드, 포트 번호를 분석하여 내부망과 외부망 사이의 패킷 트래픽을 허가 및 거절하는 라우터
+- 로깅, 모니터링, 접근제어 등의 일반적인 방화벽 기능을 하는 방화벽 구조
 
-![스크리닝 라우터](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FXaKME%2FbtqxLVNBjSk%2F9EKquBMYSqjEFv8CvQK5f1%2Fimg.jpg)
+![베스쳔](https://velog.velcdn.com/images%2Fmakeitcloud%2Fpost%2F449426a8-b770-4dd5-9959-18ad9fe18c34%2Fimage.png)
+
+- 인터넷 사용자가 Bastion 호스트를 통과해야만 내부망 접근 가능
+- 내부망 중요 정보 악용을 막기 위해 모든 사용자 계정 삭제 필요
+- 내부 접근 기록, 모니터링 기능 보유
 
 <br/>
 
-## 2. Bastion 호스트
+## 2. 스크리닝 라우터
 
-- 로깅, 모니터링, 접근제어 등의 일반적인 방화벽 기능을 하는 방화벽 구조
-- 
+- 네트워크에서 사용하는 통신 프로토콜의 형태, 출발지 주소와 목적지 주소, 틍신 프로토콜의 제어필드, 포트 번호를 분석하여 내부망과 외부망 사이의 패킷 트래픽을 허가 및 거절하는 라우터
+
+![스크리닝 라우터](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FXaKME%2FbtqxLVNBjSk%2F9EKquBMYSqjEFv8CvQK5f1%2Fimg.jpg)
+
+- 스크리닝 라우터로 연결 요청시, IP 또는 TCP/UDP 패킷 헤더를 분석하여 출발지/목적지 주소와 포트 번호, 제어 필드 내용 분석하고 접근 여부 판별
+- 접근 허가되면 모든 패킷은 연결이 끊기기 전까지 모두 허
+
+
+<br/>
+
+
+## 3. Dual Homed 게이트웨이
+
+- 두개의 네트워크 인터페이스를 가진 Bastion 호스트, 하나는 외부 네트워크 연결, 다른 하나는 내부 네트워크를 연결하여 라우팅 없이 통신하는 방식
+
+![듀얼](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcWHOuz%2FbtqxMsj3CZb%2FuszFYaZdEN9YZmFzR7VLpk%2Fimg.jpg)
+
+- 서비스를 제공하는 proxy 서버 사용 방식 & 응용 서비스가 제공받기 위한 직접 로그인 접근 방식
+- 외부에서 내부로 접근 시 Dual-Homed 게이트웨이 통과 필요
+
+<br/>
+
+## 4. 스크린 호스트 게이트웨이
+
+- Dual Homed 게이트웨이와 스크리닝 라우터를 함께 사용하는 방화벽 구조
+
+![혼합](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fci5wYX%2FbtqxKqUZRsf%2Fv0txz4CuKdaKSa9oC45UaK%2Fimg.jpg)
+
+- 패킷 트래픽을 스크리닝 라우터에서 1차 방어
+- Proxy 서버를 구동하는 Bastion 호스트를 통해 트래픽 점검
+- 통과 못한 패킷 트래픽 모두 거절
+
+<br/>
+
+## 5. 스크린 서브넷 게이트웨이
+
+- 인터넷과 내부 네트워크를 개인 스크린 게이트웨이를 통해 연결, 스크리닝 라우터와 스크린 서브넷을 통한 방화벽 구조
+
+![스크린서브넷](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbLiNNI%2FbtqxKqncyQq%2FUQXcJoMc6zxNwtJk7VgMk1%2Fimg.jpg)
+
+- DMZ의 역할을 외내부 모두 갖추기 위한 운영
+- 패킷 규칙을 통하여 패킷 트래픽을 필터링
+- Bastion 호스트는 Proxy 서버를 통해 허용되지 않은 트래픽 차단 기능 수행
 
 <br/>
 <br/>
