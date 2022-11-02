@@ -10,7 +10,7 @@
 ## 요구 페이징(Demand paging)
 
 - 프로세스의 주소 공간을 메모리에 적재하는 기법
-- 어떤 페이지가 메모리에 존재하는지 여부를 판별하기 위해 **valid-invalid bit(유효-무효비트)**를 사용하여 페이지 테이블에 존재 여부 표시
+- 어떤 페이지가 메모리에 존재하는지 여부를 판별하기 위해 `valid-invalidbit(유효-무효비트)`를 사용하여 페이지 테이블에 존재 여부 표시
 
 ![유효무효비트](https://velog.velcdn.com/images%2Flcy960729%2Fpost%2Fd06a8f42-967d-4f18-bc4f-77a00fba9bc8%2Fimage.png)
 
